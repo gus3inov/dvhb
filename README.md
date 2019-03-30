@@ -1,5 +1,15 @@
 # DVHB RANGES
 
+# Getting started
+
+```bash
+yarn install
+
+npm start
+
+npm run start:server
+```
+
 ## Git flow
 
 ### Commit's naming
