@@ -1,5 +1,5 @@
 export {
-	register
+	fetchRanges
 } from './actionCreators';
 export {
 	getData,
@@ -7,4 +7,4 @@ export {
 	getPending,
 } from './selectors';
 export { modelName } from './actions';
-export { default as reducer, State } from './reducer';
+export { default as reducer } from './reducer';

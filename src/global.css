@@ -1,0 +1,11 @@
+body {
+    font-family: 'Mukta', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: #222;
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
