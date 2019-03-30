@@ -1,14 +1,17 @@
 {
     "ranges": [
         {
+            "Id": 1,
             "Name": "Item 1",
             "Percent": 0
         },
         {
+            "Id": 2,
             "Name": "Item 2",
             "Percent": 0
         },
         {
+            "Id": 3,
             "Name": "Item 3",
             "Percent": 0
         }
