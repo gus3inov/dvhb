@@ -8,7 +8,6 @@ export class ApiService {
 		url: string,
 		options: object = {}
 	): Promise<T> {
-		console.log(process.env);
 		const fullOptions = Object.assign(
 			{
 				headers: {

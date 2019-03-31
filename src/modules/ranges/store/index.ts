@@ -1,5 +1,6 @@
 export {
-	fetchRanges
+	fetchRanges,
+	setRanges,
 } from './actionCreators';
 export {
 	getData,

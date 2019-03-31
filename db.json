@@ -1,19 +1,104 @@
 {
     "ranges": [
         {
-            "Id": 1,
-            "Name": "Item 1",
-            "Percent": 0
+            "id": 1,
+            "data": [
+                {
+                    "Id": 1,
+                    "Name": "Item 1",
+                    "Percent": 0
+                }
+            ]
         },
         {
-            "Id": 2,
-            "Name": "Item 2",
-            "Percent": 0
+            "id": 2,
+            "data": [
+                {
+                    "Id": 1,
+                    "Name": "Item 1",
+                    "Percent": 0
+                },
+                {
+                    "Id": 2,
+                    "Name": "Item 2",
+                    "Percent": 0
+                }
+            ]
         },
         {
-            "Id": 3,
-            "Name": "Item 3",
-            "Percent": 0
+            "id": 3,
+            "data": [
+                {
+                    "Id": 1,
+                    "Name": "Item 1",
+                    "Percent": 0
+                },
+                {
+                    "Id": 2,
+                    "Name": "Item 2",
+                    "Percent": 0
+                },
+                {
+                    "Id": 3,
+                    "Name": "Item 3",
+                    "Percent": 0
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "data": [
+                {
+                    "Id": 1,
+                    "Name": "Item 1",
+                    "Percent": 0
+                },
+                {
+                    "Id": 2,
+                    "Name": "Item 2",
+                    "Percent": 0
+                },
+                {
+                    "Id": 3,
+                    "Name": "Item 3",
+                    "Percent": 0
+                },
+                {
+                    "Id": 4,
+                    "Name": "Item 4",
+                    "Percent": 0
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "data": [
+                {
+                    "Id": 1,
+                    "Name": "Item 1",
+                    "Percent": 0
+                },
+                {
+                    "Id": 2,
+                    "Name": "Item 2",
+                    "Percent": 0
+                },
+                {
+                    "Id": 3,
+                    "Name": "Item 3",
+                    "Percent": 0
+                },
+                {
+                    "Id": 4,
+                    "Name": "Item 4",
+                    "Percent": 0
+                },
+                {
+                    "Id": 5,
+                    "Name": "Item 5",
+                    "Percent": 0
+                }
+            ]
         }
     ]
 }

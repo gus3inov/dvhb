@@ -1,20 +1,18 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import { Input, Slider } from '@ui/atoms';
-import { StyledWrapper, StyledLabel } from './styles';
+import { StyledWrapper, StyledLabel, StyledSlider } from './styles';
 
 export type Props = {
 	label: string;
-	defaultValue: number;
-	onChange: (value: string) => void;
+	value: number;
+	onChange: (value: number) => void;
 };
 
-export const Range: React.FC<Props> = ({ label, defaultValue, onChange }) => {
-	const [valueState, setValue] = useState(defaultValue);
+export const Range: React.FC<Props> = ({ label, value, onChange }) => {
 
 	const onChangeInput = useCallback(
-		value => {
-			setValue(value);
-			onChange(value);
+		inputValue => {
+			onChange(inputValue);
 		},
 		[onChange]
 	);
@@ -22,13 +20,17 @@ export const Range: React.FC<Props> = ({ label, defaultValue, onChange }) => {
 	return (
 		<StyledWrapper>
 			<StyledLabel>{label}</StyledLabel>
-			<Slider
-				min={0}
-				max={100}
-				value={valueState}
-				onChange={onChangeInput}
-			/>
-			<Input value={valueState} onChange={onChangeInput} />
+			<StyledSlider>
+				{value}%
+				<Slider
+					min={0}
+					max={100}
+					step={0.01}
+					value={value}
+					onChange={onChangeInput}
+				/>
+			</StyledSlider>
+			<Input value={value} onChange={onChangeInput} />
 		</StyledWrapper>
 	);
 };

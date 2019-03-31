@@ -13,6 +13,25 @@ export const StyledWrapper = styled.div`
     }
 `;
 
+export const ButtonList = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+`;
+
+export const StyledButton = styled.button`
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: 0;
+    color: #fff;
+    font-size: 17px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 7px 15px;
+    margin: 0 10px;
+`;
+
 export const StyledTitle = styled.h2`
     text-align: center;
     font-size: 68px;

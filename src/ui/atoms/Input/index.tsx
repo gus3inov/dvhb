@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import NumberFormat, { NumberFormatValues } from 'react-number-format';
 import { StyledInput } from './styles';
 
 export type Props = {
@@ -8,12 +9,26 @@ export type Props = {
 
 export const Input: React.FC<Props> = ({ value = '', onChange }) => {
 	const onChangeInput = useCallback(
-		e => {
-			const targetValue: number = +e.target.value;
-			onChange(targetValue);
+		formatValue => {
+			if (formatValue.floatValue !== value) {
+				onChange(formatValue.floatValue);
+			}
 		},
 		[onChange]
 	);
 
-	return <StyledInput value={value} onChange={onChangeInput} />;
+	return (
+		<StyledInput>
+			<NumberFormat
+				value={value}
+				thousandSeparator={true}
+				decimalSeparator="."
+				isNumericString
+				decimalScale={2}
+				fixedDecimalScale
+				allowNegative={false}
+				onValueChange={onChangeInput}
+			/>
+		</StyledInput>
+	);
 };
