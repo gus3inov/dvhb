@@ -9,7 +9,6 @@ export type Props = {
 };
 
 export const Range: React.FC<Props> = ({ label, value, onChange }) => {
-
 	const onChangeInput = useCallback(
 		inputValue => {
 			onChange(inputValue);
