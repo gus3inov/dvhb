@@ -1,18 +1,23 @@
 import { handleActions, Action } from 'redux-actions';
 
-import { FETCH_FAILED, FETCH_SUCCEEDED, FETCH_PENDING } from './actions';
+import {
+	FETCH_PENDING,
+	FETCH_SUCCEEDED,
+	FETCH_FAILED,
+	SET_RANGES,
+} from './actions';
 
-export type Payload = [] | object | null | undefined;
+export type Payload = TRange[] | object | undefined;
 
 export type State = {
 	pending: boolean;
 	data: Payload;
-	error: Payload;
+	error: object | null | undefined;
 };
 
 const initialState: State = {
 	pending: false,
-	data: null,
+	data: [],
 	error: null,
 };
 
@@ -28,7 +33,11 @@ export default handleActions<State>(
 			error: null,
 			data: action.payload,
 		}),
-		[FETCH_FAILED]: (state, action: Action<Payload>) => ({
+		[SET_RANGES]: (state, action: Action<Payload>) => ({
+			...state,
+			data: action.payload,
+		}),
+		[FETCH_FAILED]: (state, action: Action<object>) => ({
 			...state,
 			pending: false,
 			error: action.payload,
