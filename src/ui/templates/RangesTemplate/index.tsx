@@ -1,6 +1,11 @@
 import * as React from 'react';
 import { Range } from '@ui/molecules';
-import { StyledWrapper, StyledTitle, StyledButton, ButtonList } from './styles';
+import {
+	StyledWrapper,
+	StyledTitle,
+	StyledButton,
+	StyledButtonList,
+} from './styles';
 
 export type Props = {
 	data: TRange[];
@@ -15,7 +20,7 @@ export const RangesTemplate: React.FC<Props> = ({
 }) => (
 	<StyledWrapper>
 		<StyledTitle>Ranges 📏</StyledTitle>
-		<ButtonList>
+		<StyledButtonList>
 			<StyledButton onClick={() => fetchRanges(1)}>
 				Один элемент
 			</StyledButton>
@@ -31,7 +36,7 @@ export const RangesTemplate: React.FC<Props> = ({
 			<StyledButton onClick={() => fetchRanges(5)}>
 				Пять элементов
 			</StyledButton>
-		</ButtonList>
+		</StyledButtonList>
 		{data.map(range => (
 			<Range
 				key={range.Id}
@@ -40,5 +45,13 @@ export const RangesTemplate: React.FC<Props> = ({
 				onChange={value => onChangeRange(range.Id, value)}
 			/>
 		))}
+		<div>
+			<h2>Результат:</h2>
+			{data.map(range => (
+				<div key={range.Id}>
+					{range.Name}: {range.Percent}%
+				</div>
+			))}
+		</div>
 	</StyledWrapper>
 );

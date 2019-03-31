@@ -13,7 +13,7 @@ export const StyledWrapper = styled.div`
     }
 `;
 
-export const ButtonList = styled.div`
+export const StyledButtonList = styled.div`
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
